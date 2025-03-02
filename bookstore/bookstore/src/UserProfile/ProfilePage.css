@@ -1,0 +1,389 @@
+
+/* Main Profile Page Styles */
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #122c6f;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row; /* Adjusted to handle content more flexibly */
+  width: 100%;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px #122c6f;
+  overflow: hidden;
+}
+
+.profile-sidebar {
+  flex: 1;
+  background-color: #f8f9fb;
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid #e0e0e0;
+}
+
+.profile-pic-container {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
+.p-image {
+  position: absolute;
+  top: 90px;
+  right: 90px;
+  cursor: pointer;
+}
+
+.profile-pic-upload {
+  display: none;
+}
+
+.circle {
+  position: relative;
+  display: inline-block;
+}
+
+.upload-button {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.profile-sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.profile-sidebar p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.profile-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.profile-details {
+  flex: 2;
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: transparent;
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+.tab.active {
+  border-bottom: 3px solid #007bff;
+}
+
+.tab-content {
+  display: none;
+  background-color: transparent;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tab-content h2{
+  color: #fff;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.form-group input:focus {
+  background-color: #e0f7fa;
+}
+
+.form-group select{
+  height: 40px;
+}
+
+.btn-update {
+  grid-column: span 2;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.popup {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  position: relative;
+  margin: 5px;
+  height: 100px; /* Reduced height */
+  transition: transform 0.3s ease;
+}
+
+.image-container img {
+  max-width: 100px; /* Reduced width */
+  max-height: 100px; /* Reduced height */
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.image-container button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 0, 0, 0.7);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.image-container button:hover {
+  transform: scale(1.2);
+}
+
+.video-preview {
+  position: relative;
+  margin: 5px;
+  height: 150px; /* Reduced height */
+  transition: transform 0.3s ease;
+}
+
+.video-preview video {
+  max-width: 150px; /* Reduced width */
+  max-height: 150px; /* Reduced height */
+  transition: transform 0.3s ease;
+}
+
+.video-preview:hover video {
+  transform: scale(1.1);
+}
+
+.video-preview button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 0, 0, 0.7);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.video-preview button:hover {
+  transform: scale(1.2);
+}
+
+.file-upload {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.file-upload-button {
+  font-size: 24px;
+  color: #007bff;
+}
+
+.book-images-upload,
+.book-video-upload {
+  display: none;
+}
+
+.btn-logout {
+  background-color: transparent;
+  color: #dc3545;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.btn-logout .fa-sign-out-alt {
+  margin-right: 8px;
+}
+
+.books-added-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  width: 100%;
+  max-height: calc(100vh - 200px);
+  padding-right: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #111819;
+}
+
+.book-item {
+  border: 1px solid #007bff;
+  padding: 10px; /* Reduced padding */
+  border-radius: 10px;
+  margin-bottom: 10px; /* Reduced margin */
+  width: 100%;
+  font-size: 14px;
+  justify-content: space-between;
+  animation: fadeIn 0.5s ease;
+  color: #122c6f;
+}
+
+.book-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.book-header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.btn-remove {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-remove:hover {
+  background-color: #ff1a1a;
+}
+
+.book-content-added {
+  margin-top: 20px;
+  width: fit-content;
+  animation: fadeIn 0.5s ease;
+}
+
+.book-content-added .row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap; 
+}
+
+.book-content-added .column {
+  flex: 1;
+  margin-right: 15px;
+  max-width: 140px; 
+  color: #000;
+}
+
+.book-content-added .column:last-child {
+  margin-right: 0;
+}
+
+.book-content-added img,
+.book-content-added video {
+  max-width: 100px; /* Reduced width */
+  max-height: 100px; /* Reduced height */
+  margin-bottom: 10px;
+}

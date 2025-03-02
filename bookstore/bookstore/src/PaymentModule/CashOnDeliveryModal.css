@@ -1,0 +1,58 @@
+.cod-modal {
+    animation: fadeIn 0.5s forwards;
+    font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    text-align: center;
+    color: white;
+}
+
+.check-icon {
+    width: 80%;
+    animation: fadeIn 4s ease-in-out infinite;
+}
+
+.cod-modal .modal-header {
+    border-bottom: none;
+}
+
+.cod-modal .modal-body {
+    background-color: #ffffff;
+    color: #122c6f;
+    padding: 20px;
+}
+
+.cod-modal .modal-body .check-icon {
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+.cod-modal .modal-body p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.cod-modal .modal-body .continue-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.cod-modal .modal-body .continue-btn:hover {
+    background-color: #122c6f;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+

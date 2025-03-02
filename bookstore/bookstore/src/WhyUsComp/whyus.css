@@ -1,0 +1,330 @@
+/* whyus.css */
+
+.bookstore-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .image-container {
+    flex: 1;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .bookstore-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    animation: slideIn 1.5s ease-out;
+    margin-left: 50px;
+    
+}
+
+.content h2, .content h1, .content p, .content hr {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.content h2 {
+    animation-delay: 0.5s;
+    color: #6695ed;
+}
+
+.content h1 {
+    font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    animation-delay: 1s;
+    text-align: left;
+    color: #122c6f;
+    font-weight: 500;
+  }
+  
+  .content p {
+    animation-delay: 1.5s;
+    color: rgb(148, 145, 177);
+  }
+  
+  .content hr {
+    animation-delay: 2s;
+    width: 150px;
+    border: 1px solid #122c6f;
+  }
+  
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+/* src/Bookstore.css */
+.bookstore {
+  text-align: center;
+  padding: 20px;
+  background-image: url('https://img.freepik.com/free-photo/white-flower-textured-background-design_53876-106131.jpg?uid=R139172721&ga=GA1.1.1157361663.1710595436&semt=ais_user');
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+}
+
+.books-whyus {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.book {
+  width: 200px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.book1 {
+  transform: translateX(-30px);
+  margin-right: -70px;
+  z-index: 1;
+}
+
+.book2 {
+  z-index: 2;
+  transform: translateY(-20px);
+}
+
+.book3 {
+  z-index: 1;
+  margin-left: -70px;
+  transform: translateX(30px);
+}
+
+.book:hover {
+  transform: scale(1.1);
+  z-index: 4;
+}
+
+.book-content {
+  margin-top: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.book-content h1 {
+  margin-top: 30px;
+  font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 2em;
+  margin: 20px 0;
+  color: #122c6f;
+}
+
+.book-content p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.book-content hr{
+  border: 1px solid rgb(144, 144, 144);
+}
+  
+
+/* Features.css */
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  background: #fff;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px #122c6f;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #ff6600;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #122c6f;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.subscription-section {
+  color: #122c6f;
+  text-align: center;
+  padding: 30px;
+  margin-top: 2rem;
+  background-image: url('https://img.freepik.com/free-photo/flowers-background-copy-space_23-2148015622.jpg?uid=R139172721&ga=GA1.1.1157361663.1710595436&semt=ais_user');
+  background-size: cover;
+  height: 50vh;
+}
+
+.subscription-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  margin-top: 90px;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  color: #6695ed;
+  margin-bottom: 20px;
+}
+
+.email-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  width: 300px;
+}
+
+.subscribe-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background: #122c6f;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background: #6695ed;
+}
+
+@keyframes flyIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fly-in {
+  animation: flyIn 0.5s ease forwards;
+}
+
+/* TestimonialCard.css */
+.testimonial-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.image-section {
+  flex: 1;
+  width: 50%;
+}
+
+.bookio-image {
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 100px;
+}
+
+.testimonial-section {
+  flex: 2;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 80%;
+}
+
+.quote-icon {
+  font-size: 60px;
+  color: #6695ed;
+}
+
+.rating-whyus {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  color: #ff6600;
+}
+
+
+.testimonial-title {
+  font-size: 24px;
+  color: #122c6f;
+  margin-top: 10px;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #122c6f;
+}
+
+.user-role {
+  font-size: 14px;
+  color: #6695ed;
+}

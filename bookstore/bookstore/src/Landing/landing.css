@@ -1,0 +1,373 @@
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.video-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 6s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.video-welcome{
+  font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 20px;
+  font-weight: 600;
+} 
+
+.video-name{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.link-button {
+  font-family: "Oswald", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 30px;
+  font-weight: 700;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.link-button:hover {
+  background-color: transparent;
+  color: #122c6f;
+  transform: scale(1.05); 
+}
+
+.arrow {
+  margin-left: 10px; 
+  font-size: 30px; 
+}
+
+.card-container {
+margin-top: 20px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-right: 10px;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 40%;
+  background-color: rgba(8, 22, 47, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s;
+  margin-top: 20px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.card:hover .overlay {
+  left: 0;
+}
+.overlay h2, .overlay h5 {
+  margin: 0;
+}
+.high-selling-book-h1 {
+  text-align: center;
+  color: #122c6f;
+  font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 900;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.high-selling-book-h1.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.count-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  padding: 20px;
+}
+
+.count-container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.count-box {
+  text-align: center;
+  color: #122c6f;
+  font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  padding: 20px;
+  border: 2px solid #122c6f;
+  border-radius: 10px;
+  width: 20%;
+}
+
+.count-box h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
+/*  */
+.deals-container {
+  font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 20px;
+  font-weight: bolder;
+}
+
+.deals-of-the-week {
+  flex: 3;
+  margin-right: 20px;
+  padding: 20px;
+  border: 2px solid #122c6f;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  color: #122c6f;
+}
+
+.deal-timer-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 260px;
+}
+
+.clock-icon {
+  font-size: 24px;
+  color: #6695ed;
+  margin-right: 10px;
+  background-color: '' ;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6695ed;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.deals-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.deals-card {
+  width: 23%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.deals-card:hover {
+  transform: scale(1.05);
+}
+
+.deals-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.deals-card:hover img {
+  transform: scale(1.1);
+}
+
+.deals-card-content {
+  padding: 10px;
+  text-align: left;
+}
+
+.deals-card-content h3 {
+  font-size: 16px; 
+  margin: 0 0 5px 0;
+}
+
+.deals-card-content p {
+  margin: 5px 0;
+  font-size: 14px; 
+}
+
+.deal-price {
+  color: #122c6f;
+  font-size: 14px; 
+  font-weight: bold;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.rating {
+  color: #ffa500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+
+.top-selling-vendors {
+  flex: 2;
+  padding: 20px;
+  border: 2px solid #122c6f;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  color: #122c6f;
+}
+
+.vendor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.vendor-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.vendor-card:hover {
+  transform: scale(1.05);
+}
+
+.vendor-rank {
+  font-size: 20px;
+  color: #6695ed;
+  margin-right: 10px;
+}
+
+.vendor-info {
+  display: flex;
+  align-items: center;
+}
+
+.vendor-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.vendor-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.vendor-info h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.vendor-info p {
+  margin:0;
+  font-size: 14px;
+  color: #666;
+}
+
+.vendor-info .rating {
+  font-size: 14px;
+  color: #6695ed;
+  text-align: left;
+  margin: 0;
+}
+
+.blog-header{
+  font-weight: 600;
+  color: #122c6f;
+  font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.blog-card{
+  font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  border: 1px solid #122c6f;
+}
+.blog-card h5{
+  font-weight: 500;
+  color: #122c6f;
+}
+
+.row-blog{
+  display: flex;
+  flex-direction: row;
+}

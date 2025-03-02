@@ -1,0 +1,244 @@
+   .app {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: repeat(2, 280px); /* Adjust the height as needed */
+    gap: 20px;
+    padding: 220px;
+  }
+  
+  .section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+  }
+  
+  .section:nth-child(1) { animation-delay: 0.1s; }
+  .section:nth-child(2) { animation-delay: 0.2s; }
+  .section:nth-child(3) { animation-delay: 0.3s; }
+  .section:nth-child(4) { animation-delay: 0.4s; }
+  .section:nth-child(5) { animation-delay: 0.5s; }
+  .section:nth-child(6) { animation-delay: 0.6s; }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .top-left, .middle-middle {
+    display: flex;
+    align-items: center;
+    border: 0px;
+  }
+  
+  .top-left img, .middle-middle img {
+    max-width: 50%; /* Adjust the size as needed */
+    margin-right: 20px;
+  }
+  
+  .text-content {
+    max-width: 50%; /* Adjust the size as needed */
+  }
+  
+  .top-middle, .top-right, .middle-left, .middle-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0px;
+  }
+  
+  .background-image-1 {
+    background-image: url('http://kodeforest.net/wp-demo/bookclub/wp-content/uploads/2017/02/18-350x350.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+  }
+  
+  .background-image-2 {
+    background-image: url('http://subsolardesigns.com/leona/wp-content/uploads/2019/04/glittering_stars1-600x900.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+  }
+  
+  .top-right, .middle-left, .middle-right {
+    color: white;
+  }
+  
+  .top-left {
+    grid-column: 1 / span 1;
+    grid-row: 1;
+    background-color: #ededed;
+  }
+  
+  .top-middle {
+    grid-column: 2 / span 1;
+    grid-row: 1;
+    background-color: rgba(161, 48, 48, 0.266);
+  }
+  
+  .top-right {
+    grid-column: 3 / span 1;
+    grid-row: 1;
+  }
+  
+  .middle-left {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+  }
+  
+  .middle-middle {
+    grid-column: 2 / span 1;
+    grid-row: 2;
+  }
+  
+  .middle-right {
+    grid-column: 3 / span 1;
+    grid-row: 2;
+    background-image: url('https://auteur.g5plus.net/main/wp-content/uploads/2018/11/product-06-330x462.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  .categories-container {
+    position: relative;
+    padding-top: 60px; /* Adjust based on the height of your fixed navbar */
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(8, auto); /* 8 rows */
+    gap: 37px;
+    padding: 37px;
+}
+
+.book-card {
+    position: relative;
+    width: 300px;
+    height: 550px;
+    box-shadow: 0 4px 8px #122c6f;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 14px;
+    background-color: #fff; 
+    cursor: pointer; 
+    color: #333; 
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-image {
+    position: relative;
+}
+
+.book-image img {
+    width: 100%;
+    height: 400px;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-image img {
+    transform: scale(1.1);
+}
+
+.tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 3px;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.tag.hot {
+    top: 40px;
+    background-color: #dc3545;
+}
+
+.hover-icons {
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    flex-direction: column; /* Change to row for horizontal icons */
+    gap: 15px;
+    color: rgb(251, 6, 42);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    font-size: x-large;
+}
+
+.book-card:hover .hover-icons {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.hover-icons svg {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hover-icons svg:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.book-info {
+    text-align: left;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.book-info h3,
+.book-info p {
+    margin: 0; /* Remove default margin */
+    text-decoration: none; /* Remove underline */
+}
+.book-info h3{
+    color: #122c6f;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px;
+}
+
+.new-price {
+    color: #333;
+    font-weight: bold;
+}

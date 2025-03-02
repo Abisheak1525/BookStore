@@ -1,0 +1,60 @@
+.upi-modal {
+    animation: fadeIn 0.5s forwards;
+    left: 430px;
+    font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .upi-form {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    color: #122c6f;
+    width: 100%;
+    margin-top: 0px;
+  }
+  
+  .upi-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .upi-form .form-control {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #1e90ff;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .upi-form img.qr-code {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    height: auto;
+  }
+  
+  .upi-submit-btn {
+    background-color: black;
+    border: none;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .upi-submit-btn:hover {
+    background-color: #122c6f;
+  }
+  

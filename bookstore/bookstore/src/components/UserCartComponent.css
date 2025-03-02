@@ -1,0 +1,155 @@
+.shopping-cart-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    color: #122c6f;
+  }
+  
+  .cart-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cart-table {
+    width: 60%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    height: fit-content;
+    margin-left: 5%;
+    justify-content: center;
+  }
+  
+  .cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+  }
+  
+  .cart-table th {
+    text-align: center;
+    font-size: larger;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-info img {
+    width: 50px;
+    height: 75px;
+    margin-right: 10px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+  }
+  
+  .cart-sidebar {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+  }
+  
+  .cart-totals {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .shipping-options {
+    margin: 20px 0;
+  }
+  
+  .shipping-choice {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .shipping-choice label {
+    margin: 5px 0;
+  }
+  
+  .checkout-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .checkout-button:hover {
+    background-color: #122c6f;
+  }
+  
+  .remove-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: red;
+    margin-left: 30px;
+  }
+  
+  .total-amount, .grand-total {
+    font-size: 1.2em;
+  }
+
+  .coupon-section {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .coupon-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 60%;
+  }
+  
+  .apply-coupon-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 3px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-coupon-button:hover {
+    background-color: #122c6f;
+  }
+  
+  .discount-info {
+    color: #ffaf02;
+    margin-top: 10px;
+  }
+
+  .back-to-categories {
+    position: absolute;
+    top: 10px;
+    right: 1300px;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 80px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .back-to-categories:hover {
+    background-color: transparent;
+    color: #122c6f;
+  }
+  

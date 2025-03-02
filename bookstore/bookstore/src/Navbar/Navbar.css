@@ -1,0 +1,41 @@
+.categories-container{
+    color: #122c6f;
+    font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.nav-logo-zoom {
+    transform: scale(1.5);
+    transition: 0.5s;
+  }
+  
+  .nav-text, .nav-icon {
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    
+  }
+  
+  .nav-text:hover, .nav-icon:hover, .nav-text:focus, .nav-icon:focus {
+    color:white;
+    transform: scale(1.3);
+  }
+  
+  .nav-text:active, .nav-icon:active {
+    transform: scale(1.4);
+  }
+
+.cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #122c6f;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+  
+.cart-icon i {
+font-size: 24px;
+color: #fff;
+}

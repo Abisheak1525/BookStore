@@ -1,0 +1,152 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  color: #122c6f;
+  font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.dashboard {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.dashboard-title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.dashboard-overview {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  flex: 1 1 calc(20% - 20px); /* responsive width */
+  min-width: 150px; /* ensure cards do not get too small */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  margin: 10px; /* added margin for spacing between cards */
+  animation: fadeIn 1s ease-in-out;
+}
+
+.dashboard-card i {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.dashboard-card.green {
+  background-color: #28a745;
+}
+
+.dashboard-card.orange {
+  background-color: #fd7e14;
+}
+
+.dashboard-card.blue {
+  background-color: #007bff;
+}
+
+.dashboard-card.teal {
+  background-color: #17a2b8;
+}
+
+.dashboard-card.dark-green {
+  background-color: #20c997;
+}
+
+.dashboard-card-details {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.dashboard-summary {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.summary-item {
+  border: 1px solid;
+  flex: 1 1 calc(20% - 20px); 
+  min-width: 150px; 
+  text-align: center;
+  margin: 10px; 
+  color: black;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.summary-item h3 {
+  margin-top: 10px;
+}
+
+.summary-icon {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+.summary-icon.yellow {
+  color: #ffc107;
+  margin-right: 58px;
+}
+
+.summary-icon.red {
+  color: #dc3545;
+  margin-right: 58px;
+}
+
+.summary-icon.blue {
+  color: #007bff;
+  margin-right: 58px;
+}
+
+.summary-icon.green {
+  margin-right: 58px;
+  color: #28a745;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.weekly-sales-chart, .best-selling-products-chart {
+  flex: 1;
+  margin: 30px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-card, .summary-item {
+    flex: 1 1 calc(45% - 20px); 
+  }
+  .charts {
+    flex-direction: column;
+  }
+  .weekly-sales-chart, .best-selling-products-chart {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-card, .summary-item {
+    flex: 1 1 calc(100% - 20px); 
+  }
+}
+
+.order-container {
+  margin-top: 60px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

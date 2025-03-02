@@ -1,0 +1,129 @@
+
+  .admin-sidebar {
+    width: 250px; /* Adjust width as needed */
+    background-color: #f4f4f4; /* Adjust sidebar color */
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Fixed position for sidebar */
+    overflow-y: auto; 
+  }
+  
+  /* Main content area */
+  .main-content {
+    margin-left: 50px; /* Same width as sidebar to avoid overlap */
+    width: calc(100% - 250px); /* Adjust width based on sidebar */
+    box-sizing: border-box;
+    transition: margin-left 0.3s ease-in-out; /* Smooth transition for sidebar collapse */
+  }
+  
+  /* Make sure content resizes appropriately */
+  @media screen and (max-width: 768px) {
+    .admin-sidebar {
+      width: 200px; /* Adjust width as needed */
+    }
+    
+    .main-content {
+      margin-left: 200px; /* Adjust based on sidebar width */
+      width: calc(100% - 200px); /* Adjust width based on sidebar */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .admin-sidebar {
+      display: none; /* Hide sidebar on very small screens */
+    }
+    
+    .main-content {
+      margin-left: 0; /* Remove left margin */
+      width: 100%; /* Full width */
+    }
+  }
+  
+  .user-table-container {
+    width: 100%;
+    box-sizing: border-box;
+    color: #122c6f;
+    font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .search-input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .filter-button, .reset-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .filter-button:hover, .reset-button:hover {
+    background-color: #122c6f;
+    transform: scale(1.1);
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .user-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .user-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .actions .action-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .action-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .action-button svg {
+    font-size: 16px; /* Adjust icon size if needed */
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .user-table {
+      flex: 1 1 calc(45% - 20px); 
+    }
+}
+
+  @media (max-width: 480px) {
+    .user-table {
+      flex: 1 1 calc(100% - 20px); 
+    }
+  }

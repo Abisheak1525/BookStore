@@ -1,0 +1,147 @@
+.book-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    height: 400px;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-image {
+    position: relative;
+}
+
+.book-image img {
+    width: 100%;
+    height: auto;
+}
+
+
+.book-info {
+    padding: 10px;
+}
+
+.book-info h3 {
+    margin: 10px 0;
+}
+
+.book-info p {
+    margin: 5px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: red;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Nova Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    margin-right: 0px;
+}
+
+.card-link {
+    flex: 1;
+    text-decoration: none;
+}
+
+.thumbnail-image {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    margin: 5px;
+    border: 2px solid transparent;
+    display: inline-block;
+}
+
+.thumbnail-image:hover, .thumbnail-video:hover {
+    border: 2px solid #000;
+}
+
+.main-image, .main-video {
+    width: 100%;
+    height: auto;
+}
+
+.book-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book-detail-left, .book-detail-right {
+    flex: 1;
+}
+
+.book-detail-left {
+    max-width: 50%;
+}
+
+.book-detail-main-view img, .book-detail-main-view video {
+    width: 100%;
+    height: auto;
+}
+
+.book-detail-right {
+    max-width: 50%;
+}
+
+.book-detail-right .actions {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .book-detail-container {
+        flex-direction: column;
+    }
+
+    .book-detail-left, .book-detail-right {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .thumbnail-image {
+        width: 80px; /* Adjust thumbnail size for smaller screens */
+    }
+
+    .book-detail-thumbnails {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-detail-right {
+        padding: 0 10px; /* Add padding to book info on very small screens */
+    }
+
+    .book-detail-left img, .book-detail-left video {
+        width: 100%;
+        height: auto;
+    }
+
+    .thumbnail-image {
+        width: 100px; /* Further adjust thumbnail size for very small screens */
+    }
+
+    .book-detail-thumbnails {
+        flex-direction: column;
+        align-items: center;
+    }
+}
